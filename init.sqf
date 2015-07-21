@@ -5,6 +5,12 @@ enableEngineArtillery false;
 enableSaving [false,false];
 // ==========================================
 // GLOBAL EXECUTION
+
+if (isServer) then {
+	// SERVERSIDE EXECUTION
+	_wait = [] execVM "sand_scripts\sand_econInit.sqf";
+};
+waitUntil {time > 1;};
 [] execVM "sand_scripts\zlt_fieldrepair.sqf";
 [] execVM "sand_scripts\sand_radioInit.sqf";
 [] execVM "sand_scripts\sand_loadoutCreator.sqf";
