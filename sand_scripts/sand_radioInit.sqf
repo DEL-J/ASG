@@ -1,4 +1,4 @@
-call compile preprocessFileLineNumbers "radio.sqf"; //Runs 'radio.sqf' so that all is ready
+call compile preprocessFileLineNumbers "sand_scripts\sand_radioPreInit.sqf"; //Runs 'sand_scripts\sand_radioPreInit.sqf' so that all is ready
 
 channelSetup = { //Function to determine channel to be added to and add player to it
     _channels = [];

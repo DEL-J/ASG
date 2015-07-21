@@ -1,5 +1,5 @@
-null = [player] execvm "loadout.sqf";
-null = [player] execvm "Briefing.sqf";
-null = [player] execvm "CallRadio.sqf";
-null = [player] execvm "LockBoxes.sqf";
-null = [player] execvm "CivInteraction.sqf";
+null = [player] execvm "sand_scripts\sand_pLoadoutCreator.sqf";
+null = [player] execvm "sand_scripts\sand_briefing.sqf";
+null = [player] execvm "sand_scripts\sand_radioInit.sqf";
+null = [player] execvm "sand_scripts\sand_lockBoxes.sqf";
+null = [player] execvm "sand_scripts\sand_civInteract.sqf";
