@@ -18,3 +18,42 @@ respawndelay = 5;
 respawnTemplates[] = {"Revive", "MenuPosition"};
 respawndialog = false;
 respawnOnStart = -1;
+
+
+class Params
+{
+	class spacer_0
+	{
+		title = "= = = = = = = = = = =";
+		values[]={0,0};
+		texts[]={"",""};
+		default = 0;
+	};
+	
+	class spacer_1
+	{
+		title = "= Mission Settings";
+		values[]={0,0};
+		texts[]={"",""};
+		default = 0;
+	};
+	
+	class spacer_2
+	{
+		title = "= = = = = = = = = = =";
+		values[]={0,0};
+		texts[]={"",""};
+		default = 0;
+	};
+	class sand_param_startingBalance
+	{
+		title = "Starting Balance";
+		values[] = {25000, 50000, 100000, 500000, 1000000};
+		texts[] = {"$25000", "$50000", "$100000", "$500000", "$1000000"};
+		default = 100000;
+		isGlobal = 1;
+ 		code = "sand_param_startingBalance = %1; publicVariable ""sand_param_startingBalance"";";
+	};
+	
+	
+};
