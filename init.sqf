@@ -1,0 +1,10 @@
+enablesentences false;
+disableTIequipment true;
+enableEngineArtillery false;
+enableSaving [false,false];
+[] execvm "zlt_fieldrepair.sqf";
+[] execvm "Greeks\IndiGear.sqf";
+[] execvm "VCOMAI\init.sqf";
+[] execvm "CallRadio.sqf";
+[] execvm "ZeusGear.sqf";
+[] execvm "Tags.sqf";

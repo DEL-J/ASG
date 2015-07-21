@@ -1,0 +1,20 @@
+author = "Deljay";
+onLoadName = "Operation";
+onLoadMission = Support the server at AthenaSecurityGroup.com;
+disabledAI=1;
+disableChannels[]={0,2,4,6};
+debriefing=1;
+forceRotorLibSimulation = 1;
+
+class Header
+{
+	gameType = Sandbox;
+	minplayers = 1;
+	maxPlayers = 93;
+};
+
+respawn = 3;
+respawndelay = 5;
+respawnTemplates[] = {"Revive", "MenuPosition"};
+respawndialog = false;
+respawnOnStart = -1;
