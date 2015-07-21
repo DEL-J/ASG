@@ -1,6 +1,6 @@
 // Field repair by [STELS]Zealot
 // Just add 
-// [] execVM "zlt_fieldrepair.sqf";
+// [] execVM "sand_scripts\zlt_fieldrepair.sqf";
 // http://forums.bistudio.com/showthread.php?168714-Realistic-repair-script
 
 #define DEFAULT_FREPAIR_VER "1P"

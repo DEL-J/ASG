@@ -1,5 +1,5 @@
-
 Fnc_AdjustUnitGear={
+private ["_unit", "_type", "_side"];
 _unit=_this select 0;
 
 _type=typeof _unit;
