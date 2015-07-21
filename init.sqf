@@ -1,7 +1,6 @@
 // ==========================================
 // PRE-INIT CALLS
-enableSentences false;
-disableTIequipment true;
+{_x disableTIequipment true;} forEach (allMissionObjects "All");
 enableEngineArtillery false;
 enableSaving [false,false];
 // ==========================================
