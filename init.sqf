@@ -19,6 +19,8 @@ enableSaving [false,false];
 [] execVM "sand_scripts\greek_gear\IndiGear.sqf";
 [] execVM "VCOMAI\init.sqf";
 
+
+
 // ==========================================
 // 
 waitUntil {time > 1};
@@ -26,10 +28,12 @@ if (isServer) then {
 	// SERVERSIDE EXECUTION
 	[] execVM "sand_scripts\sand_econInit.sqf";
 	[] execVM "sand_scripts\supply_requisition\sand_supplyInit.sqf";
+	
 };
 
 
 waitUntil {!isNil "GV_Sand_Balance"};
+
 
 if !((getPlayerUID player) in GV_Sand_ConnectedIDs) then {
 	
