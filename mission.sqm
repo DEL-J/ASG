@@ -5983,7 +5983,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=32;
+		items=34;
 		class Item0
 		{
 			position[]={8747.1846,65.114456,25188.088};
@@ -6212,6 +6212,21 @@ class Mission
 			name="CivV2";
 			type="Empty";
 			colorName="ColorCIV";
+		};
+		class Item32
+		{
+			position[]={8147.5049,-30.056488,25495.525};
+			name="mrk_supply_spawn";
+			text="Supply Spawn";
+			type="Empty";
+		};
+		class Item33
+		{
+			position[]={9611.2354,-5.8179698,22406.473};
+			name="mrk_supply_pickup";
+			text=" Supplies Pickup";
+			type="mil_dot";
+			colorName="ColorBlue";
 		};
 	};
 	class Sensors
