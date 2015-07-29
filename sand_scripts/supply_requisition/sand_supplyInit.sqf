@@ -65,7 +65,7 @@ sand_fnc_sup_largeCrate = {
 	//carrier spawned, now spawn the crate
 	_crate = createVehicle ["Box_East_AmmoVeh_F", [0,0,0], [], 0, "NONE"];
 	_crate allowDamage false;
-	
+	_crate attachTo [_trawler, [0,-5.3,-2.3]];
 	clearWeaponCargoGlobal _crate;
 	clearMagazineCargoGlobal _crate;
 	clearBackpackCargoGlobal _crate;
@@ -75,22 +75,41 @@ sand_fnc_sup_largeCrate = {
 		_isWep = isClass (configFile >> "CfgWeapons" >> (_x select 0));
 		if (_isWep) then {
 			_crate addWeaponCargoGlobal [(_x select 0), (_x select 1)];
-			diag_log format["_crate addWeaponCargoGlobal [%1, %2];", (_x select 0), (_x select 1)];
 		} else {
 			_crate addMagazineCargoGlobal [(_x select 0), (_x select 1)];
-			diag_log format["_crate addMagazineCargoGlobal [%1, %2];", (_x select 0), (_x select 1)];
 		};
 	} forEach _gear;
 	
 	
-	_condition = false;
-	while {!_condition} do {
-		_pitch = 0 - ((_engine call BIS_fnc_getPitchBank) select 0);
-		_bank = 0 -  (((_engine call BIS_fnc_getPitchBank) select 1) * (3 / 4)); //((_engine call BIS_fnc_getPitchBank) select 1) / 4;
-		_yaw = 0;
-		[_trawler, [_pitch, _bank, _yaw]] call fnc_SetPitchBankYaw;
-		sleep 0.01;
+	
+	
+	[_trawler, _engine] spawn {
+		private ["_condition","_trawler","_engine"];
+		_condition = false;
+		_trawler = _this select 0;
+		_engine = _this select 1;
+		
+		while {!_condition} do {
+			_pitch = 0 - ((_engine call BIS_fnc_getPitchBank) select 0);
+			_bank = 0 -  (((_engine call BIS_fnc_getPitchBank) select 1) * (3 / 4)); //((_engine call BIS_fnc_getPitchBank) select 1) / 4;
+			_yaw = 0;
+			[_trawler, [_pitch, _bank, _yaw]] call fnc_SetPitchBankYaw;
+			sleep 0.01;
+		};
 	};
+	
+	waitUntil {(speed _engine) > 1};
+	waitUntil {(speed _engine) < 1};
+	if ((_engine distance (getMarkerPos "mrk_supply_pickup")) < 50) then {
+		//success
+		_driver disableAI "MOVE";
+		detach _crate;
+	} else {
+		//stuck
+		_engine setPos (getMarkerPos "mrk_supply_pickup");
+		_driver disableAI "MOVE";
+	};
+	
 };
 
 sand_fnc_sup_smallVictor = {
