@@ -1799,7 +1799,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=375;
+		items=378;
 		class Item0
 		{
 			position[]={9145.5459,14.959175,21612.955};
@@ -1905,14 +1905,14 @@ class Mission
 		class Item9
 		{
 			position[]={9937.8057,111.35425,21562.789};
-			azimut=105.60815;
+			azimut=105.608;
 			special="NONE";
 			id=116;
 			side="EMPTY";
 			vehicle="B_supplyCrate_F";
 			skill=0.60000002;
 			text="RSE2";
-			init="nul = this execVM ""sand_scripts\crate_gear\boxRSE2.sqf"";";
+			init="nul = this execVM ""sand_scripts\crate_gear\boxEOD.sqf"";";
 		};
 		class Item10
 		{
@@ -1962,14 +1962,14 @@ class Mission
 		class Item14
 		{
 			position[]={9145.8701,15.22449,21594.998};
-			azimut=235.52791;
+			azimut=235.528;
 			special="NONE";
 			id=121;
 			side="EMPTY";
 			vehicle="B_supplyCrate_F";
 			skill=0.60000002;
 			text="RSE3";
-			init="nul = this execVM ""sand_scripts\crate_gear\boxRSE3.sqf"";";
+			init="nul = this execVM ""sand_scripts\crate_gear\boxEOD.sqf"";";
 		};
 		class Item15
 		{
@@ -6060,6 +6060,42 @@ class Mission
 			vehicle="B_supplyCrate_F";
 			skill=0.60000002;
 			init="nul = this execVM ""sand_scripts\crate_gear\boxRS3.sqf"";";
+		};
+		class Item375
+		{
+			position[]={9148.0039,15.216172,21596.277};
+			azimut=235.528;
+			special="NONE";
+			id=482;
+			side="EMPTY";
+			vehicle="B_supplyCrate_F";
+			skill=0.60000002;
+			text="RSL3";
+			init="nul = this execVM ""sand_scripts\crate_gear\boxRSL3.sqf"";";
+		};
+		class Item376
+		{
+			position[]={9151.04,14.912846,21614.029};
+			azimut=-215.005;
+			special="NONE";
+			id=483;
+			side="EMPTY";
+			vehicle="B_supplyCrate_F";
+			skill=0.60000002;
+			text="RSL1";
+			init="nul = this execVM ""sand_scripts\crate_gear\boxRSL1.sqf"";";
+		};
+		class Item377
+		{
+			position[]={9931.1328,111.82655,21564.688};
+			azimut=105.608;
+			special="NONE";
+			id=484;
+			side="EMPTY";
+			vehicle="B_supplyCrate_F";
+			skill=0.60000002;
+			text="RSL2";
+			init="nul = this execVM ""sand_scripts\crate_gear\boxRSL2.sqf"";";
 		};
 	};
 	class Markers
