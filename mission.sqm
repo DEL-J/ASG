@@ -6003,7 +6003,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=11;
+		items=13;
 		class Item0
 		{
 			position[]={8747.1846,65.114456,25188.088};
@@ -6085,6 +6085,19 @@ class Mission
 			text="Support the server at AthenaSecurityGroup.com!";
 			type="mil_dot";
 			colorName="ColorBlue";
+		};
+		class Item11
+		{
+			position[]={9197.7861,16.047592,21597.602};
+			name="mrk_supply_pickup";
+			type="mil_circle";
+			colorName="ColorBlue";
+		};
+		class Item12
+		{
+			position[]={11344.871,-185.26846,25960.895};
+			name="mrk_supply_spawn";
+			type="Empty";
 		};
 	};
 	class Sensors

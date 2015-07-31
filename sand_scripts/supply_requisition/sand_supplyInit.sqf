@@ -2,7 +2,7 @@
 
 waitUntil {(!isNil "GV_Sand_Balance") && (!isNil "GV_Sand_ConnectedIDs")};
 
-fnc_SetPitchBankYaw = { 
+fnc_SetPitchBankYaw = {
     private ["_object","_rotations","_aroundX","_aroundY","_aroundZ","_dirX","_dirY","_dirZ","_upX","_upY","_upZ","_dir","_up","_dirXTemp",
     "_upXTemp"];
     _object = _this select 0; 
@@ -47,6 +47,7 @@ sand_fnc_sup_smallCrate = {
 };
 
 sand_fnc_sup_largeCrate = {
+	/*
 	private ["_crateClass","_trawler","_driver","_condition"];
 	//spawn the carrier for the crate
 	_trawler = createVehicle ["C_Boat_Civil_04_F",(getMarkerPos "mrk_supply_spawn"), [], 0, "NONE"];
@@ -109,6 +110,24 @@ sand_fnc_sup_largeCrate = {
 		_engine setPos (getMarkerPos "mrk_supply_pickup");
 		_driver disableAI "MOVE";
 	};
+	*/
+	
+	_crate = createVehicle ["Box_East_AmmoVeh_F", [0,0,0], [], 0, "NONE"];
+	_crate allowDamage false;
+	clearWeaponCargoGlobal _crate;
+	clearMagazineCargoGlobal _crate;
+	clearBackpackCargoGlobal _crate;
+	clearItemCargoGlobal _crate;
+	_gear = [["arifle_MX_ACO_F", 20], ["30Rnd_65x39_caseless_mag", 500], ["30Rnd_65x39_caseless_mag_Tracer", 250]];
+	{
+		_isWep = isClass (configFile >> "CfgWeapons" >> (_x select 0));
+		if (_isWep) then {
+			_crate addWeaponCargoGlobal [(_x select 0), (_x select 1)];
+		} else {
+			_crate addMagazineCargoGlobal [(_x select 0), (_x select 1)];
+		};
+	} forEach _gear;
+	_crate setPos (getMarkerPos "");
 	
 };
 
