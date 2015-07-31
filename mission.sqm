@@ -1848,14 +1848,14 @@ class Mission
 		class Item4
 		{
 			position[]={9149.6826,14.890078,21615.93};
-			azimut=-215.00458;
+			azimut=-215.005;
 			special="NONE";
 			id=111;
 			side="EMPTY";
 			vehicle="B_supplyCrate_F";
 			skill=0.60000002;
 			text="RSE1";
-			init="nul = this execVM ""sand_scripts\crate_gear\boxRSE1.sqf"";";
+			init="nul = this execVM ""sand_scripts\crate_gear\boxEOD.sqf"";";
 		};
 		class Item5
 		{
@@ -5508,6 +5508,7 @@ class Mission
 			lock="LOCKED";
 			skill=1;
 			text="SC1";
+			init="nul = this execVM ""sand_scripts\crate_gear\VehicleCargo.sqf"";";
 		};
 		class Item322
 		{
@@ -5763,6 +5764,7 @@ class Mission
 			lock="LOCKED";
 			skill=1;
 			text="SC2";
+			init="nul = this execVM ""sand_scripts\crate_gear\VehicleCargo.sqf"";";
 		};
 		class Item349
 		{
@@ -5854,6 +5856,7 @@ class Mission
 			lock="UNLOCKED";
 			skill=1;
 			text="T1";
+			init="nul = this execVM ""sand_scripts\crate_gear\VehicleCargo.sqf"";";
 		};
 		class Item357
 		{
@@ -5923,8 +5926,8 @@ class Mission
 			vehicle="B_supplyCrate_F";
 			lock="LOCKED";
 			skill=1;
-			text="BoxUniform";
-			init="nul = this execVM ""sand_scripts\crate_gear\boxUniform.sqf"";";
+			text="BoxJump";
+			init="nul = this execVM ""sand_scripts\crate_gear\boxJump.sqf"";";
 		};
 		class Item363
 		{

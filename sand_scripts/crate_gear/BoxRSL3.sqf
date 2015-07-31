@@ -4,7 +4,7 @@ clearweaponcargoglobal _this;
 clearitemcargoglobal _this;
 clearbackpackcargoglobal _this;
 _this additemcargoglobal ["optic_Aco", 3];
-_this addweaponcargoglobal ["arifle_MX_GL_Black_F", 2];
+_this addweaponcargoglobal ["arifle_MX_GL_Black_F", 3];
 _this addweaponcargoglobal ["Rangefinder", 3];
 _this addmagazinecargoglobal ["1Rnd_HE_Grenade_shell", 18];
 _this addmagazinecargoglobal ["UGL_FlareWhite_F", 18];
