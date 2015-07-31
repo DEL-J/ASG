@@ -127,7 +127,7 @@ sand_fnc_sup_largeCrate = {
 			_crate addMagazineCargoGlobal [(_x select 0), (_x select 1)];
 		};
 	} forEach _gear;
-	_crate setPos (getMarkerPos "");
+	_crate setPos (getMarkerPos "mrk_supply_pickup");
 	
 };
 
