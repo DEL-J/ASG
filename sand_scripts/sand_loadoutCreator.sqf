@@ -338,8 +338,8 @@ switch (_side) do {
 		_unit addWeapon "Rangefinder";
 		_unit setunitrank "CORPORAL";};
 		
-		//Guerilla Squad Leader
-		case "O_SoldierU_SL_F" :{
+		//Guerilla Ammo Bearer
+		case "O_soldierU_A_F" :{
 		removeAllWeapons _unit;
 		removeAllItems _unit;
 		removeAllAssignedItems _unit;
@@ -351,13 +351,13 @@ switch (_side) do {
 		_unit forceAddUniform "U_I_G_Story_Protagonist_F";
 		_unit addVest "V_Chestrig_khk";
 		_unit addHeadgear "H_Booniehat_mcamo";
-		for "_i" from 1 to 8 do {_unit addItemToVest "30Rnd_65x39_caseless_mag";};
-		_unit addWeapon "arifle_MXC_Black_F";
-		_unit addPrimaryWeaponItem "optic_ACO_grn";
-		_unit setunitrank "SERGEANT";};
+		for "_i" from 1 to 8 do {_unit addItemToVest "30Rnd_65x39_caseless_green";};
+		_unit addWeapon "arifle_Katiba_C_F";
+		_unit addPrimaryWeaponItem "optic_ACO";
+		_unit setunitrank "PRIVATE";};
 		
-		//Guerilla Team Leader
-		case "O_soldierU_TL_F" :{
+		//Guerilla Assistant Autorifleman
+		case "O_soldierU_AAR_F" :{
 		removeAllWeapons _unit;
 		removeAllItems _unit;
 		removeAllAssignedItems _unit;
@@ -369,10 +369,236 @@ switch (_side) do {
 		_unit forceAddUniform "U_I_G_Story_Protagonist_F";
 		_unit addVest "V_Chestrig_khk";
 		_unit addHeadgear "H_Booniehat_mcamo";
+		for "_i" from 1 to 8 do {_unit addItemToVest "30Rnd_65x39_caseless_green";};
+		_unit addWeapon "arifle_Katiba_C_F";
+		_unit addPrimaryWeaponItem "optic_ACO";
+		_unit setunitrank "PRIVATE";};
+		
+		//Guerilla Assistant Anti-Air
+		case "O_soldierU_AAA_F" :{
+		removeAllWeapons _unit;
+		removeAllItems _unit;
+		removeAllAssignedItems _unit;
+		removeUniform _unit;
+		removeVest _unit;
+		removeBackpack _unit;
+		removeHeadgear _unit;
+		removeGoggles _unit;
+		_unit forceAddUniform "U_I_G_Story_Protagonist_F";
+		_unit addVest "V_Chestrig_khk";
+		_unit addHeadgear "H_Booniehat_mcamo";
+		for "_i" from 1 to 8 do {_unit addItemToVest "30Rnd_65x39_caseless_green";};
+		_unit addWeapon "arifle_Katiba_C_F";
+		_unit addPrimaryWeaponItem "optic_ACO";
+		_unit setunitrank "PRIVATE";};
+		
+		//Guerilla Assistant Anti-Tank
+		case "O_soldierU_AAT_F" :{
+		removeAllWeapons _unit;
+		removeAllItems _unit;
+		removeAllAssignedItems _unit;
+		removeUniform _unit;
+		removeVest _unit;
+		removeBackpack _unit;
+		removeHeadgear _unit;
+		removeGoggles _unit;
+		_unit forceAddUniform "U_I_G_Story_Protagonist_F";
+		_unit addVest "V_Chestrig_khk";
+		_unit addHeadgear "H_Booniehat_mcamo";
+		for "_i" from 1 to 8 do {_unit addItemToVest "30Rnd_65x39_caseless_green";};
+		_unit addWeapon "arifle_Katiba_C_F";
+		_unit addPrimaryWeaponItem "optic_ACO";
+		_unit setunitrank "PRIVATE";};
+		
+		//Guerilla Autorifleman
+		case "O_soldierU_AR_F" :{
+		removeAllWeapons _unit;
+		removeAllItems _unit;
+		removeAllAssignedItems _unit;
+		removeUniform _unit;
+		removeVest _unit;
+		removeBackpack _unit;
+		removeHeadgear _unit;
+		removeGoggles _unit;
+		_unit forceAddUniform "U_B_CombatUniform_mcam_tshirt";
+		_unit addVest "V_Chestrig_khk";
+		_unit addHeadgear "H_Booniehat_mcamo";
+		for "_i" from 1 to 4 do {_unit addItemToVest "100Rnd_65x39_caseless_mag";};
+		_unit addWeapon "arifle_MX_SW_Black_F";
+		_unit addPrimaryWeaponItem "optic_ACO";
+		_unit addPrimaryWeaponItem "bipod_01_F_blk";
+		_unit setunitrank "PRIVATE";};
+		
+		//Guerilla CLS Medic
+		case "O_soldierU_medic_F" :{
+		removeAllWeapons _unit;
+		removeAllItems _unit;
+		removeAllAssignedItems _unit;
+		removeUniform _unit;
+		removeVest _unit;
+		removeBackpack _unit;
+		removeHeadgear _unit;
+		removeGoggles _unit;
+		_unit forceAddUniform "U_I_G_Story_Protagonist_F";
+		_unit addVest "V_Chestrig_khk";
+		_unit addHeadgear "H_Booniehat_mcamo";
+		_unit addBackpack "B_AssaultPack_mcamo";
+		_unit addItemToBackpack "Medikit";
+		for "_i" from 1 to 8 do {_unit addItemToVest "30Rnd_65x39_caseless_green";};
+		for "_i" from 1 to 2 do {_unit addItemToVest "Chemlight_yellow";};
+		for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellYellow";};
+		_unit addWeapon "arifle_Katiba_C_F";
+		_unit addPrimaryWeaponItem "optic_ACO";
+		_unit setunitrank "PRIVATE";};
+		
+		//Guerilla Engineer
+		case "O_engineer_U_F" :{
+		removeAllWeapons _unit;
+		removeAllItems _unit;
+		removeAllAssignedItems _unit;
+		removeUniform _unit;
+		removeVest _unit;
+		removeBackpack _unit;
+		removeHeadgear _unit;
+		removeGoggles _unit;
+		_unit forceAddUniform "U_I_G_Story_Protagonist_F";
+		_unit addVest "V_Chestrig_khk";
+		_unit addHeadgear "H_Booniehat_mcamo";
+		for "_i" from 1 to 8 do {_unit addItemToVest "30Rnd_65x39_caseless_green";};
+		_unit addWeapon "arifle_Katiba_C_F";
+		_unit addPrimaryWeaponItem "optic_ACO";
+		_unit setunitrank "PRIVATE";};
+		
+		//Guerilla Explosive Specialist
+		case "O_soldierU_exp_F" :{
+		removeAllWeapons _unit;
+		removeAllItems _unit;
+		removeAllAssignedItems _unit;
+		removeUniform _unit;
+		removeVest _unit;
+		removeBackpack _unit;
+		removeHeadgear _unit;
+		removeGoggles _unit;
+		_unit forceAddUniform "U_I_G_Story_Protagonist_F";
+		_unit addVest "V_Chestrig_khk";
+		_unit addHeadgear "H_Booniehat_mcamo";
+		for "_i" from 1 to 8 do {_unit addItemToVest "30Rnd_65x39_caseless_green";};
+		_unit addWeapon "arifle_Katiba_C_F";
+		_unit addPrimaryWeaponItem "optic_ACO";
+		_unit setunitrank "PRIVATE";};
+		
+		//Guerilla Grenadier
+		case "O_SoldierU_GL_F" :{
+		removeAllWeapons _unit;
+		removeAllItems _unit;
+		removeAllAssignedItems _unit;
+		removeUniform _unit;
+		removeVest _unit;
+		removeBackpack _unit;
+		removeHeadgear _unit;
+		removeGoggles _unit;
+		_unit forceAddUniform "U_I_G_Story_Protagonist_F";
+		_unit addVest "V_Chestrig_khk";
+		_unit addHeadgear "H_Booniehat_mcamo";
+		for "_i" from 1 to 8 do {_unit addItemToVest "30Rnd_65x39_caseless_green";};
+		_unit addWeapon "arifle_Katiba_C_F";
+		_unit addPrimaryWeaponItem "optic_ACO";
+		_unit setunitrank "PRIVATE";};
+		
+		//Guerilla Light Machine Gunner
+		case "O_Urban_HeavyGunner_F" :{
+		removeAllWeapons _unit;
+		removeAllItems _unit;
+		removeAllAssignedItems _unit;
+		removeUniform _unit;
+		removeVest _unit;
+		removeBackpack _unit;
+		removeHeadgear _unit;
+		removeGoggles _unit;
+		_unit forceAddUniform "U_I_G_Story_Protagonist_F";
+		_unit addVest "V_Chestrig_khk";
+		_unit addHeadgear "H_Booniehat_mcamo";
+		for "_i" from 1 to 2 do {_unit addItemToVest "150Rnd_93x64_Mag";};
+		_unit addWeapon "MMG_01_tan_F";
+		_unit addPrimaryWeaponItem "optic_SOS";
+		_unit addPrimaryWeaponItem "bipod_01_F_blk";
+		_unit setunitrank "PRIVATE";};
+		
+		//Guerilla Marksman
+		case "O_soldierU_M_F" :{
+		removeAllWeapons _unit;
+		removeAllItems _unit;
+		removeAllAssignedItems _unit;
+		removeUniform _unit;
+		removeVest _unit;
+		removeBackpack _unit;
+		removeHeadgear _unit;
+		removeGoggles _unit;
+		_unit forceAddUniform "U_B_FullGhillie_ard";
+		_unit addVest "V_Chestrig_khk";
 		for "_i" from 1 to 8 do {_unit addItemToVest "30Rnd_65x39_caseless_mag";};
 		_unit addWeapon "arifle_MXC_Black_F";
-		_unit addPrimaryWeaponItem "optic_ACO_grn";
-		_unit setunitrank "CORPORAL";};
+		_unit addPrimaryWeaponItem "optic_ACO";
+		_unit setunitrank "PRIVATE";};
+		
+		//Guerilla Anti-Air
+		case "O_soldierU_AA_F" :{
+		removeAllWeapons _unit;
+		removeAllItems _unit;
+		removeAllAssignedItems _unit;
+		removeUniform _unit;
+		removeVest _unit;
+		removeBackpack _unit;
+		removeHeadgear _unit;
+		removeGoggles _unit;
+		_unit forceAddUniform "U_I_G_Story_Protagonist_F";
+		_unit addVest "V_Chestrig_khk";
+		_unit addHeadgear "H_Booniehat_mcamo";
+		for "_i" from 1 to 8 do {_unit addItemToVest "30Rnd_65x39_caseless_green";};
+		_unit addWeapon "arifle_Katiba_C_F";
+		_unit addPrimaryWeaponItem "optic_ACO";
+		_unit setunitrank "PRIVATE";};
+		
+		//Guerilla Anti-Tank
+		case "O_soldierU_AT_F" :{
+		removeAllWeapons _unit;
+		removeAllItems _unit;
+		removeAllAssignedItems _unit;
+		removeUniform _unit;
+		removeVest _unit;
+		removeBackpack _unit;
+		removeHeadgear _unit;
+		removeGoggles _unit;
+		_unit forceAddUniform "U_I_G_Story_Protagonist_F";
+		_unit addVest "V_Chestrig_khk";
+		_unit addHeadgear "H_Booniehat_mcamo";
+		for "_i" from 1 to 8 do {_unit addItemToVest "30Rnd_65x39_caseless_green";};
+		_unit addBackpack "B_AssaultPack_mcamo";
+		for "_i" from 1 to 2 do {_unit addItemToBackpack "NLAW_F";};
+		_unit addWeapon "launch_NLAW_F";
+		_unit addWeapon "arifle_Katiba_C_F";
+		_unit addPrimaryWeaponItem "optic_ACO";
+		_unit setunitrank "PRIVATE";};
+		
+		//Guerilla Repair Specialist
+		case "O_soldierU_repair_F" :{
+		removeAllWeapons _unit;
+		removeAllItems _unit;
+		removeAllAssignedItems _unit;
+		removeUniform _unit;
+		removeVest _unit;
+		removeBackpack _unit;
+		removeHeadgear _unit;
+		removeGoggles _unit;
+		_unit forceAddUniform "U_I_G_Story_Protagonist_F";
+		_unit addVest "V_Chestrig_khk";
+		_unit addHeadgear "H_Booniehat_mcamo";
+		_unit addBackpack "B_AssaultPack_mcamo";
+		_unit addItemToBackpack "ToolKit";
+		for "_i" from 1 to 8 do {_unit addItemToVest "30Rnd_65x39_caseless_green";};
+		_unit addWeapon "arifle_Katiba_C_F";
+		_unit addPrimaryWeaponItem "optic_ACO";
+		_unit setunitrank "PRIVATE";};
 		
 		//Guerilla Rifleman
 		case "O_soldierU_F" :{
@@ -389,11 +615,11 @@ switch (_side) do {
 		_unit addHeadgear "H_Booniehat_mcamo";
 		for "_i" from 1 to 8 do {_unit addItemToVest "30Rnd_65x39_caseless_green";};
 		_unit addWeapon "arifle_Katiba_C_F";
-		_unit addPrimaryWeaponItem "optic_ACO_grn";
+		_unit addPrimaryWeaponItem "optic_ACO";
 		_unit setunitrank "PRIVATE";};
 		
-		//Guerilla Autorifleman
-		case "O_soldierU_AR_F" :{
+		//Guerilla AT Rifleman
+		case "O_soldierU_LAT_F" :{
 		removeAllWeapons _unit;
 		removeAllItems _unit;
 		removeAllAssignedItems _unit;
@@ -405,50 +631,15 @@ switch (_side) do {
 		_unit forceAddUniform "U_I_G_Story_Protagonist_F";
 		_unit addVest "V_Chestrig_khk";
 		_unit addHeadgear "H_Booniehat_mcamo";
-		for "_i" from 1 to 2 do {_unit addItemToVest "150Rnd_762x54_Box";};
-		_unit addWeapon "LMG_Zafir_F";
-		_unit addPrimaryWeaponItem "optic_ACO_grn";
+		for "_i" from 1 to 8 do {_unit addItemToVest "30Rnd_65x39_caseless_green";};
+		_unit addBackpack "B_AssaultPack_mcamo";
+		for "_i" from 1 to 2 do {_unit addItemToBackpack "RPG32_F";};
+		_unit addWeapon "launch_RPG32_F";
+		_unit addWeapon "arifle_Katiba_C_F";
+		_unit addPrimaryWeaponItem "optic_ACO";
 		_unit setunitrank "PRIVATE";};
 		
-		//Guerilla Machine Gunner
-		case "O_Urban_HeavyGunner_F" :{
-		removeAllWeapons _unit;
-		removeAllItems _unit;
-		removeAllAssignedItems _unit;
-		removeUniform _unit;
-		removeVest _unit;
-		removeBackpack _unit;
-		removeHeadgear _unit;
-		removeGoggles _unit;
-		_unit forceAddUniform "U_I_G_Story_Protagonist_F";
-		_unit addVest "V_Chestrig_khk";
-		_unit addHeadgear "H_Booniehat_mcamo";
-		for "_i" from 1 to 2 do {_unit addItemToVest "150Rnd_93x64_Mag";};
-		_unit addWeapon "MMG_01_tan_F";
-		_unit addPrimaryWeaponItem "optic_Arco";
-		_unit addPrimaryWeaponItem "bipod_02_F_tan";
-		_unit setunitrank "PRIVATE";};
-		
-		//Guerilla Marksman
-		case "O_soldierU_M_F" :{
-		removeAllWeapons _unit;
-		removeAllItems _unit;
-		removeAllAssignedItems _unit;
-		removeUniform _unit;
-		removeVest _unit;
-		removeBackpack _unit;
-		removeHeadgear _unit;
-		removeGoggles _unit;
-		_unit forceAddUniform "U_I_G_Story_Protagonist_F";
-		_unit addVest "V_Chestrig_khk";
-		_unit addHeadgear "H_Booniehat_mcamo";
-		for "_i" from 1 to 6 do {_unit addItemToVest "20Rnd_762x51_Mag";};
-		_unit addWeapon "srifle_DMR_06_olive_F";
-		_unit addPrimaryWeaponItem "optic_ACO_grn";
-		_unit addPrimaryWeaponItem "bipod_01_F_blk";
-		_unit setunitrank "PRIVATE";};
-		
-		//Guerilla Sniper
+		//Guerilla Sharpshooter
 		case "O_Urban_Sharpshooter_F" :{
 		removeAllWeapons _unit;
 		removeAllItems _unit;
@@ -458,15 +649,53 @@ switch (_side) do {
 		removeBackpack _unit;
 		removeHeadgear _unit;
 		removeGoggles _unit;
-		_unit forceAddUniform "U_I_G_Story_Protagonist_F";
+		_unit forceAddUniform "U_B_FullGhillie_ard";
 		_unit addVest "V_Chestrig_khk";
 		_unit addHeadgear "H_Booniehat_mcamo";
-		for "_i" from 1 to 4 do {_unit addItemToVest "10Rnd_93x64_DMR_05_Mag";};
+		for "_i" from 1 to 8 do {_unit addItemToVest "10Rnd_93x64_DMR_05_Mag";};
 		_unit addWeapon "srifle_DMR_05_blk_F";
-		_unit addPrimaryWeaponItem "optic_LRPS";
-		_unit addPrimaryWeaponItem "bipod_01_F_blk";
+		_unit addPrimaryWeaponItem "optic_SOS";
 		_unit setunitrank "PRIVATE";};
 		
+		//Guerilla Squad Leader
+		case "O_SoldierU_SL_F" :{
+		removeAllWeapons _unit;
+		removeAllItems _unit;
+		removeAllAssignedItems _unit;
+		removeUniform _unit;
+		removeVest _unit;
+		removeBackpack _unit;
+		removeHeadgear _unit;
+		removeGoggles _unit;
+		_unit forceAddUniform "U_B_CombatUniform_mcam_tshirt";
+		_unit addVest "V_Chestrig_khk";
+		_unit addHeadgear "H_MilCap_mcamo";
+		for "_i" from 1 to 8 do {_unit addItemToVest "30Rnd_65x39_caseless_mag";};
+		for "_i" from 1 to 2 do {_unit addItemToVest "Chemlight_yellow";};
+		for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellYellow";};
+		_unit addWeapon "arifle_MXC_Black_F";
+		_unit addPrimaryWeaponItem "optic_ACO";
+		_unit setunitrank "SERGEANT";};
+		
+		//Guerilla Team Leader
+		case "O_soldierU_TL_F" :{
+		removeAllWeapons _unit;
+		removeAllItems _unit;
+		removeAllAssignedItems _unit;
+		removeUniform _unit;
+		removeVest _unit;
+		removeBackpack _unit;
+		removeHeadgear _unit;
+		removeGoggles _unit;
+		_unit forceAddUniform "U_I_G_Story_Protagonist_F";
+		_unit addVest "V_Chestrig_khk";
+		_unit addHeadgear "H_MilCap_mcamo";
+		for "_i" from 1 to 8 do {_unit addItemToVest "30Rnd_65x39_caseless_green";};
+		for "_i" from 1 to 2 do {_unit addItemToVest "Chemlight_yellow";};
+		for "_i" from 1 to 2 do {_unit addItemToVest "SmokeShellYellow";};
+		_unit addWeapon "arifle_Katiba_C_F";
+		_unit addPrimaryWeaponItem "optic_ACO";
+		_unit setunitrank "CORPORAL";};
 		};//end type switch
 		};//end EAST
 		
@@ -656,91 +885,92 @@ switch (_side) do {
 				removeallweapons _unit;
 				switch (_type) do {
 				//Start
+				case "C_man_p_beggar_F" :{
+				_unit forceAddUniform "U_C_Poor_1"};
+				
 				case "C_man_1" :{
+				_unit forceAddUniform "U_Competitor"};
+				
+				case "C_man_polo_1_F" :{
+				_unit forceAddUniform "U_C_Poloshirt_blue"};
+				
+				case "C_man_polo_2_F" :{
+				_unit forceAddUniform "U_C_Poloshirt_burgundy"};
+				
+				case "C_man_polo_3_F" :{
+				_unit forceAddUniform "U_C_Poloshirt_redwhite"};
+				
+				case "C_man_polo_4_F" :{
+				_unit forceAddUniform "U_C_Poloshirt_salmon"};
+				
+				case "C_man_polo_5_F" :{
+				_unit forceAddUniform "U_C_Poloshirt_stripped"};
+				
+				case "C_man_polo_6_F" :{
+				_unit forceAddUniform "U_C_Poloshirt_tricolour"};
+				
+				case "C_man_shorts_1_F" :{
 				_unit forceAddUniform "U_BG_Guerilla2_1"};
-
+				
 				case "C_man_1_1_F" :{
 				_unit forceAddUniform "U_BG_Guerilla2_2"};
-
+				
 				case "C_man_1_2_F" :{
 				_unit forceAddUniform "U_BG_Guerilla2_3"};
-
+				
 				case "C_man_1_3_F" :{
 				_unit forceAddUniform "U_BG_Guerilla3_1"};
-
+				
+				case "C_man_p_fugitive_F" :{
+				_unit forceAddUniform "U_I_G_resistanceLeader_F"};
+				
+				case "C_man_p_shorts_1_F" :{
+				_unit forceAddUniform "U_OrestesBody"};
+				
 				case "C_man_hunter_1_F" :{
 				_unit forceAddUniform "U_C_HunterBody_grn"};
-
-				case "C_man_p_beggar_F" :{
+				
+				case "C_journalist_F" :{
+				removeVest _unit;
 				_unit forceAddUniform "U_C_Journalist"};
-
-				case "C_man_p_fugitive_F" :{
-				_unit forceAddUniform "U_C_Poloshirt_blue"};
-
-				case "C_man_p_shorts_1_F" :{
-				_unit forceAddUniform "U_C_Poloshirt_burgundy"};
-
-				case "C_man_polo_1_F" :{
-				_unit forceAddUniform "U_C_Poloshirt_redwhite"};
-
-				case "C_man_polo_2_F" :{
-				_unit forceAddUniform "U_C_Poloshirt_salmon"};
-
-				case "C_man_polo_3_F" :{
-				_unit forceAddUniform "U_C_Poloshirt_stripped"};
-
-				case "C_man_polo_4_F" :{
-				_unit forceAddUniform "U_C_Poloshirt_tricolour"};
-
-				case "C_man_polo_5_F" :{
-				_unit forceAddUniform "U_C_Poor_1"};
-
-				case "C_man_polo_6_F" :{
-				_unit forceAddUniform "U_C_WorkerCoveralls"};
-
-				case "C_man_shorts_1_F" :{
-				_unit forceAddUniform "U_Competitor"};
-
-				case "C_man_shorts_2_F" :{
-				_unit forceAddUniform "U_I_G_resistanceLeader_F"};
-
-				case "C_man_shorts_3_F" :{
-				_unit forceAddUniform "U_Marshal"};
-
-				case "C_man_shorts_4_F" :{
-				_unit forceAddUniform "U_NikosAgedBody"};
-
-				case "C_man_w_worker_F" :{
-				_unit forceAddUniform "U_NikosBody"};
-
+				
 				case "C_Marshal_F" :{
-				_unit forceAddUniform "U_OrestesBody"};
-
-				case "C_scientist_F" :{
+				removeGoggles _unit;
+				removeHeadgear _unit;
+				_unit forceAddUniform "U_Marshal"};
+				
+				case "C_man_pilot_F" :{
+				removeBackpack _unit;
 				_unit forceAddUniform "U_Rangemaster"};
+				
+				case "C_scientist_F" :{
+				_unit forceAddUniform "U_C_Scientist"};
+				
+				case "C_man_shorts_2_F" :{
+				_unit forceAddUniform "U_NikosAgedBody"};
+				
+				case "C_man_shorts_3_F" :{
+				_unit forceAddUniform "U_NikosBody"};
+				
+				case "C_man_shorts_4_F" :{
+				_unit forceAddUniform "U_OrestesBody"};
+				
+				case "C_man_w_worker_F" :{
+				_unit forceAddUniform "U_C_WorkerCoveralls"};
 				};//end TYPE				
 				};//end CIVILIAN
 				
 };//End SIDE switch
-
-
-
 };//end function
 
-
-
-
 //ZEUS1 is the name of a Zeus module on map. Alter the name as needed
-
 
 Zeus addEventHandler ["CuratorObjectPlaced",{  
 _zeusModule=_this select 0;
 _unit= _this select 1;
 
-	//define based on unit sides
+//define based on unit sides
 
 [_unit] spawn Fnc_AdjustUnitGear;
 
-
 }];
-
