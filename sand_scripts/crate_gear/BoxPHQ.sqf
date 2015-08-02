@@ -11,7 +11,7 @@ _this addmagazinecargoglobal ["30Rnd_65x39_caseless_mag", 120];
 _this additemcargoglobal ["optic_Aco", 4];
 _this additemcargoglobal ["optic_Hamr", 1];
 _this additemcargoglobal ["bipod_01_F_blk", 1];
-_this additemcargoglobal ["acc_flashlight", 4];
+_this additemcargoglobal ["acc_flashlight", 5];
 _this additemcargoglobal ["Medikit", 1];
 _this additemcargoglobal ["FirstAidKit", 4];
 _this additemcargoglobal ["ItemGPS", 2];

@@ -925,7 +925,7 @@ switch (_side) do {
 				_unit forceAddUniform "U_I_G_resistanceLeader_F"};
 				
 				case "C_man_p_shorts_1_F" :{
-				_unit forceAddUniform "U_OrestesBody"};
+				_unit forceAddUniform "U_I_G_Story_Protagonist_F"};
 				
 				case "C_man_hunter_1_F" :{
 				_unit forceAddUniform "U_C_HunterBody_grn"};

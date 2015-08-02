@@ -75,19 +75,18 @@ class Mission
 	class Intel
 	{
 		resistanceWest=0;
-		startWeather=0.29999998;
-		startFog=0.29999998;
+		startWeather=0;
 		startWind=0.099999994;
 		startWaves=0.099999994;
-		forecastWeather=0.099999994;
+		forecastWeather=0;
 		forecastWind=0.099999994;
 		forecastWaves=0.099999994;
 		forecastLightnings=0.099999994;
-		year=2035;
-		month=6;
-		day=24;
+		year=2015;
+		month=8;
+		day=2;
 		hour=6;
-		minute=45;
+		minute=0;
 		startFogDecay=0.013;
 		forecastFogDecay=0.013;
 	};
@@ -5830,14 +5829,14 @@ class Mission
 		class Item354
 		{
 			position[]={9146.3154,14.950275,21613.232};
-			azimut=-125.76421;
+			azimut=-125.764;
 			special="NONE";
 			id=461;
 			side="EMPTY";
 			vehicle="B_supplyCrate_F";
 			skill=0.60000002;
 			text="PHQ1";
-			init="nul = this execVM ""sand_scripts\crate_gear\boxPHQ1.sqf"";";
+			init="nul = this execVM ""sand_scripts\crate_gear\boxPHQ.sqf"";";
 		};
 		class Item355
 		{
@@ -5865,8 +5864,8 @@ class Mission
 		};
 		class Item357
 		{
-			position[]={9936.7627,111.44919,21560.078};
-			azimut=-163.89008;
+			position[]={9936.4551,111.50928,21559.121};
+			azimut=-342.89801;
 			special="NONE";
 			id=464;
 			side="EMPTY";
@@ -5876,8 +5875,8 @@ class Mission
 		};
 		class Item358
 		{
-			position[]={9937.0264,111.39452,21560.975};
-			azimut=-163.89008;
+			position[]={9936.1719,111.56522,21558.223};
+			azimut=-342.89801;
 			special="NONE";
 			id=465;
 			side="EMPTY";
@@ -5887,8 +5886,8 @@ class Mission
 		};
 		class Item359
 		{
-			position[]={9937.2705,111.34387,21561.807};
-			azimut=-162.81097;
+			position[]={9935.9131,111.61701,21557.389};
+			azimut=-341.81891;
 			special="NONE";
 			id=466;
 			side="EMPTY";
@@ -5898,20 +5897,20 @@ class Mission
 		};
 		class Item360
 		{
-			position[]={9935.9287,111.61703,21557.363};
-			azimut=-162.81058;
+			position[]={9937.3311,111.33923,21561.822};
+			azimut=-341.81894;
 			special="NONE";
 			id=467;
 			side="EMPTY";
 			vehicle="B_supplyCrate_F";
 			skill=0.60000002;
 			text="PHQ2";
-			init="nul = this execVM ""sand_scripts\crate_gear\boxPHQ2.sqf"";";
+			init="nul = this execVM ""sand_scripts\crate_gear\boxPHQ.sqf"";";
 		};
 		class Item361
 		{
-			position[]={9936.4746,111.50665,21559.152};
-			azimut=-162.81097;
+			position[]={9936.7607,111.45113,21560.035};
+			azimut=-341.81891;
 			special="NONE";
 			id=468;
 			side="EMPTY";
@@ -5922,8 +5921,8 @@ class Mission
 		};
 		class Item362
 		{
-			position[]={9936.1934,111.56428,21558.213};
-			azimut=-162.81097;
+			position[]={9937.0518,111.39297,21560.973};
+			azimut=-341.81891;
 			special="NONE";
 			id=469;
 			side="EMPTY";
@@ -5968,14 +5967,14 @@ class Mission
 		class Item366
 		{
 			position[]={9144.6689,15.241199,21597.287};
-			azimut=-215.22209;
+			azimut=-215.222;
 			special="NONE";
 			id=473;
 			side="EMPTY";
 			vehicle="B_supplyCrate_F";
 			skill=0.60000002;
 			text="PHQ3";
-			init="nul = this execVM ""sand_scripts\crate_gear\boxPHQ3.sqf"";";
+			init="nul = this execVM ""sand_scripts\crate_gear\boxPHQ.sqf"";";
 		};
 		class Item367
 		{
@@ -6132,7 +6131,7 @@ class Mission
 			repeating=1;
 			interruptable=1;
 			age="UNKNOWN";
-			expActiv="Hint ""Don't touch the mortars!"";";
+			expActiv="{[""Don't touch the mortars!"",""hint"",(Owner _x),false] call BIS_fnc_MP;  }foreach thislist;";
 			class Effects
 			{
 			};
