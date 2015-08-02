@@ -19,3 +19,6 @@ respawndelay = 5;
 respawnTemplates[] = {"Revive", "MenuPosition"};
 respawndialog = false;
 respawnOnStart = -1;
+
+#include "defines.hpp"
+#include "dialogs.hpp"
