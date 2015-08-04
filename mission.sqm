@@ -6102,7 +6102,7 @@ class Mission
 	};
 	class Sensors
 	{
-		items=5;
+		items=6;
 		class Item0
 		{
 			position[]={9240.4277,16.569609,21598.973};
@@ -6173,6 +6173,18 @@ class Mission
 			interruptable=1;
 			age="UNKNOWN";
 			expActiv="SC1 setVehicleLock ""LOCKED""; SC2 setVehicleLock ""LOCKED""; T1 setVehicleLock ""LOCKED"";";
+			class Effects
+			{
+			};
+		};
+		class Item5
+		{
+			position[]={9208.6201,15.529226,21612.443};
+			activationBy="ALPHA";
+			repeating=1;
+			interruptable=1;
+			age="UNKNOWN";
+			expActiv="[] call BIS_fnc_GUIEditor;";
 			class Effects
 			{
 			};
