@@ -1,4 +1,4 @@
-author = "Deljay";
+author = "Alphapan, Bismarck, and Moses";
 onLoadName = "Operation";
 onLoadMission = Support the server at AthenaSecurityGroup.com;
 disabledAI=1;
