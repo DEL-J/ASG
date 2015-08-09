@@ -84,17 +84,17 @@ fnc_closeInventory = {null = [] spawn {waituntil {!(isNull findDisplay 602)};
 closeDialog 0; hint "Wrong Group Box!";};};
 closeInventoryEHidx = RS6 addEventHandler ["ContainerOpened", {if !((_this select 1) in approvedList17) then {call fnc_closeInventory;};}];
 
-approvedList18 = [HQ6,HQ5,HQ4,OPS,PL3,PS3,A31,A231A,A31B,A313,A314,A316,A317];
+approvedList18 = [HQ6,HQ5,HQ4,OPS,PL3,PS3,A31,A31A,A31B,A313,A314,A316,A317];
 fnc_closeInventory = {null = [] spawn {waituntil {!(isNull findDisplay 602)};
 closeDialog 0; hint "Wrong Group Box!";};};
 closeInventoryEHidx = RS7 addEventHandler ["ContainerOpened", {if !((_this select 1) in approvedList18) then {call fnc_closeInventory;};}];
 
-approvedList19 = [HQ6,HQ5,HQ4,OPS,PL3,PS3,A32,A232A,A32B,A323,A324,A326,A327];
+approvedList19 = [HQ6,HQ5,HQ4,OPS,PL3,PS3,A32,A32A,A32B,A323,A324,A326,A327];
 fnc_closeInventory = {null = [] spawn {waituntil {!(isNull findDisplay 602)};
 closeDialog 0; hint "Wrong Group Box!";};};
 closeInventoryEHidx = RS8 addEventHandler ["ContainerOpened", {if !((_this select 1) in approvedList19) then {call fnc_closeInventory;};}];
 
-approvedList20 = [HQ6,HQ5,HQ4,OPS,PL3,PS3,A33,A233A,A33B,A333,A334,A336,A337];
+approvedList20 = [HQ6,HQ5,HQ4,OPS,PL3,PS3,A33,A33A,A33B,A333,A334,A336,A337];
 fnc_closeInventory = {null = [] spawn {waituntil {!(isNull findDisplay 602)};
 closeDialog 0; hint "Wrong Group Box!";};};
 closeInventoryEHidx = RS9 addEventHandler ["ContainerOpened", {if !((_this select 1) in approvedList20) then {call fnc_closeInventory;};}];
