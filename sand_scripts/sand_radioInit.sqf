@@ -10,16 +10,14 @@ CHANNELS = [ //Your channel names
     "Platoon 1",
     "Platoon 2",
     "Platoon 3",
-    "Company Radio Net",
-    "Headquarters"
+    "Company Net"
 ];
 
 CHANNEL_DATA = [ //MUST ALL BE UPPER CASE!
     ["A11","A12","A13","PL1","PS1","RO1","CM1"], //Members of 'Channel 1'
     ["A21","A22","A23","PL2","PS2","RO2","CM2"], //Members of 'Channel 2'
     ["A31","A32","A33","PL3","PS3","RO3","CM3"], //Members of 'Channel 3'
-    ["RO6","RO1","RO2","RO3","HP1","HP2","HP3","WSL","ASL"], //Members of 'Channel 4'
-    ["HQ6","HQ5","HQ4","OPS","RO6","CM6","HP1","HP2","HP3","WSL","ASL"] //Members of 'Channel 5'
+    ["RO1","RO2","RO3","RO6","CM6","WSL","ASL","HP1","HP2","HP3"], //Members of 'Channel 4'
 ];
 
 if isServer then { //Only do this if we are a server

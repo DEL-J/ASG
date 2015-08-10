@@ -963,9 +963,19 @@ switch (_side) do {
 };//End SIDE switch
 };//end function
 
-//ZEUS1 is the name of a Zeus module on map. Alter the name as needed
+//ZEUS is the name of a Zeus module on map. Alter the name as needed
 
 Zeus addEventHandler ["CuratorObjectPlaced",{  
+_zeusModule=_this select 0;
+_unit= _this select 1;
+
+//define based on unit sides
+
+[_unit] spawn Fnc_AdjustUnitGear;
+
+}];
+
+Zeus2 addEventHandler ["CuratorObjectPlaced",{  
 _zeusModule=_this select 0;
 _unit= _this select 1;
 

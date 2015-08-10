@@ -5,4 +5,3 @@ waitUntil {time > 1};
 
 GV_Sand_Balance = GV_Sand_Balance - sand_param_deathCost;
 publicVariable "GV_Sand_Balance";
-
