@@ -5,7 +5,7 @@ disabledAI=1;
 disableChannels[]={0,2,4,6};
 debriefing=1;
 forceRotorLibSimulation = 1;
-enableDebugConsole = 1;
+enableDebugConsole = 2;
 
 class Header
 {
