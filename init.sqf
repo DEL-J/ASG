@@ -10,11 +10,10 @@ enableEngineArtillery false;
 enableSaving [false,false];
 // ==========================================
 // GLOBAL EXECUTION
-
+[] execVM "sand_scripts\sand_radio.sqf";
 [] execVM "sand_scripts\zlt_fieldrepair.sqf";
 [] execVM "sand_scripts\sand_loadoutCreator.sqf";
 [] execVM "sand_scripts\sand_pTagInit.sqf";
-[] execVM "sand_scripts\sand_radio.sqf";
 [] execVM "sand_scripts\greek_gear\IndiGear.sqf";
 [] execVM "VCOMAI\init.sqf";
 
@@ -28,7 +27,6 @@ if (isServer) then {
 	
 };
 
-
 waitUntil {!isNil "GV_Sand_Balance"};
 
 
@@ -39,6 +37,3 @@ if !((getPlayerUID player) in GV_Sand_ConnectedIDs) then {
 	GV_Sand_Balance = GV_Sand_Balance + sand_param_playerInvestment; //add the player investment
 	
 };
-
-
-

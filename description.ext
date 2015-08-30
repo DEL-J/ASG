@@ -1,11 +1,10 @@
 author = "Alphapan, Bismarck, and Moses";
-onLoadName = "Operation";
+onLoadName = "Athena Security Group";
 onLoadMission = Support the server at AthenaSecurityGroup.com;
 disabledAI=1;
 disableChannels[]={0,2,4,6};
 debriefing=1;
 forceRotorLibSimulation = 1;
-enableDebugConsole = 2;
 
 class Header
 {
@@ -19,6 +18,11 @@ respawndelay = 5;
 respawnTemplates[] = {"Revive", "MenuPosition"};
 respawndialog = false;
 respawnOnStart = -1;
+reviveDelay = 60;
+reviveBleedOutDelay = 600;
 
 #include "defines.hpp"
 #include "dialogs.hpp"
+#include "dialog.hpp"
+
+//loadScreen = "JournalUI\images\loadScreen.jpg";

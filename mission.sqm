@@ -36,14 +36,17 @@ class Mission
 		"A3_Air_F_Beta_Heli_Transport_02",
 		"A3_Soft_F_Gamma_HEMTT",
 		"A3_Characters_F_OPFOR",
-		"A3_Characters_F_Mark"
+		"A3_Characters_F_Mark",
+		"3DEN",
+		"A3_Armor_F_EPB_APC_tracked_03"
 	};
 	addOnsAuto[]=
 	{
 		"A3_Characters_F_BLUFOR",
 		"a3_characters_f",
 		"A3_Characters_F_Gamma",
-		"A3_Modules_F_Curator_Curator",
+		"3DEN",
+		"a3_modules_f_curator_curator",
 		"A3_Modules_F",
 		"A3_Weapons_F_Ammoboxes",
 		"A3_Structures_F_Items_Vessels",
@@ -69,6 +72,7 @@ class Mission
 		"A3_Boat_F_Boat_Armed_01",
 		"A3_Air_F_Beta_Heli_Transport_02",
 		"A3_Soft_F_Gamma_HEMTT",
+		"A3_Armor_F_EPB_APC_tracked_03",
 		"a3_map_altis"
 	};
 	randomSeed=3961815;
@@ -1922,7 +1926,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=369;
+		items=370;
 		class Item0
 		{
 			position[]={9156.9629,14.498257,21645.879};
@@ -5451,7 +5455,7 @@ class Mission
 		};
 		class Item306
 		{
-			position[]={9198.0322,14.643205,21652.691};
+			position[]={9195.667,14.596618,21654.475};
 			azimut=-127.173;
 			special="NONE";
 			id=413;
@@ -5707,7 +5711,7 @@ class Mission
 		};
 		class Item333
 		{
-			position[]={9200.7109,14.7005,21649.361};
+			position[]={9198.3457,14.656305,21651.145};
 			azimut=-127.173;
 			special="NONE";
 			id=440;
@@ -5799,7 +5803,7 @@ class Mission
 		};
 		class Item341
 		{
-			position[]={9204.0947,14.762632,21643.951};
+			position[]={9205.375,14.794936,21639.449};
 			azimut=-127.173;
 			special="NONE";
 			id=448;
@@ -6132,6 +6136,19 @@ class Mission
 			skill=0.60000002;
 			text="RSL3";
 			init="nul = this execVM ""sand_scripts\crate_gear\boxRSL3.sqf"";";
+		};
+		class Item369
+		{
+			position[]={9201.0293,14.729675,21645.617};
+			azimut=-127.173;
+			special="NONE";
+			id=476;
+			side="EMPTY";
+			vehicle="I_APC_tracked_03_cannon_F";
+			lock="UNLOCKED";
+			skill=1;
+			text="IFV1";
+			init="nul = this execVM ""sand_scripts\crate_gear\VehicleCargo.sqf"";";
 		};
 	};
 	class Markers
