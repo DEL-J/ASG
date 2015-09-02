@@ -8,6 +8,7 @@ sand_param_playerInvestment = 2500;
 {_x disableTIequipment true;} forEach (allMissionObjects "All");
 enableEngineArtillery false;
 enableSaving [false,false];
+
 // ==========================================
 // GLOBAL EXECUTION
 [] execVM "sand_scripts\sand_radio.sqf";
@@ -15,6 +16,7 @@ enableSaving [false,false];
 [] execVM "sand_scripts\sand_loadoutCreator.sqf";
 [] execVM "sand_scripts\sand_pTagInit.sqf";
 [] execVM "sand_scripts\greek_gear\IndiGear.sqf";
+[] execVM "sand_scripts\sand_NPCinteraction.sqf";
 [] execVM "VCOMAI\init.sqf";
 
 // ==========================================

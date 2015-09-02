@@ -34,7 +34,7 @@ player createDiaryRecord ["diary", ["Battle Drill 7","
 <br/>
 3. As soon as the grenade detonates, the first man in the stack will enter the room and move right or left, scanning from the back corner on his side all the way around to the opposite corner along the same wall. The second man will enter as soon behind the first man as practical and begin his scan from the opposite direction of the first man. The third man will enter the room closely behind the second man and Keep his focus on any doors or windows opposite of the entrance that the assaulting element used to enter.
 <br/>
-4. Announce “foothold secure” to signal follow on elements. The assaulting element takes up power positions in the room.
+4. Announce “Clear!” to signal follow on elements. The assaulting element takes up power positions in the room.
 <br/>
 5. All follow on elements enter the breach.
 "]];
@@ -92,7 +92,7 @@ player createDiaryRecord ["diary", ["Battle Drill 5","
 <br/>
  - A vulnerable flank of at least one bunker
 <br/>
- - A the best route to a vulnerable flank
+ - The best route to a vulnerable flank
 <br/>
 5. The assaulting element approaches their objective, the base of fire shifts their fires.
 <br/>
@@ -275,6 +275,8 @@ player createDiaryRecord ["diary", ["Call for Fire","
 
 //ACE
 player createDiaryRecord ["diary", ["ACE Report","
+Send this report to higher whenever asked for an ACE report.
+<br/><br/>
 1. Ammunition
 <br/>
 - - Green, more than 80% ammo remaining
@@ -304,6 +306,8 @@ player createDiaryRecord ["diary", ["ACE Report","
 - - Red, most used
 <br/>
 - - Black, all used
+<br/><br/>
+Example: Green, Green, Green.
 "]];
 
 // ====================================================================================
@@ -312,6 +316,8 @@ player createDiaryRecord ["diary", ["ACE Report","
 player createDiaryRecord ["diary", ["Situation Report","
 <font size='18'>SITREP</font>
 <br/>
+Send a situation report whenever higher asks for a sitrep.
+<br/><br/>
 1. Where are you?
 <br/>
 2. What are you doing?
@@ -327,29 +333,40 @@ player createDiaryRecord ["diary", ["Situation Report","
 
 //SALT Report
 player createDiaryRecord ["diary", ["SALT Report","
-<br/>
-1. Size, how many?
+Send this report whenever enemies are spotted. Accompany this report with a map mark, if possible.
+<br/><br/>
+1. Size, how many and what type?
 <br/>
 2. Activity, what are they doing?
 <br/>
 3. Location, where are they?
 <br/>
 4. Time, when did you see them?
+<br/><br/>
+Example Call: 4 times enemy infantry garrisoned at grid 12345678, 0545
+<br/>
+Example Mark: 4xInfantry, garrisoned, 0545
 "]];
 
 // ====================================================================================
 
 //Slant Report
-player createDiaryRecord ["diary", ["Check Report","
-1. What are you doing?
+player createDiaryRecord ["diary", ["Pre-Action Report","
+Send this report before any operation. Place the report on map if no one can recieve your report.
+<br/><br/>
+1. Who are you?
 <br/>
-2. Where are you going?
+2. What are you doing?
 <br/>
-3. How many are going?
+3. Where are you going?
 <br/>
-4. What are you taking?
+4. How many are going?
+<br/>
+5. What are you taking?
 <br/>
 5. When are you going?
+<br/><br/>
+Example: Athena 1-1 is conducting a security patrol at grid 283746, taking 8x personnel, 2x AT, 2x Trucks, 1800 local time.
 "]];
 
 // ====================================================================================
@@ -369,55 +386,55 @@ No high explosives may be used within two hundred meters of civilian settlements
 player createDiaryRecord ["diary", ["Leadership Procedures","
 <font size='18'>PLATOON LEADER</font>
 <br/>
-1. receive mission from higher.
+1. Choose a main objective or receive mission your objective from higher and mark it on the map.
 <br/>
-2. Select a main objective rally point, ensure that it is either a safe distance from the objective or one terrain feature away.
+2. Plan backwards, place a support objective and security objective or designate battle positions for a defensive objective.
 <br/>
-3. Designate elements as main effort, supporting effort, and security effort.
+3. Designate a rally point that is a safe distance from the objective or at least one terrain feature away.
 <br/>
-4. Assign objectives for each effort. Elements move toward their individual objectives from the platoon objective rally point.
+4. Assign an element to each battle position or to security, support, and assault or main effort.
 <br/>
-5. Relay your plans to subordinates as quickly as possible to allow them to begin preparation for movement.
+5. Relay your plans to subordinates as soon as possible to allow them to begin preparation for movement.
 <br/>
-6. Designate a lead element and a trail element for movement to the objective rally point.
+6. Order MOVE OUT once all elements report READY TO MOVE. Direct movement as necessary to get to the rally point.
 <br/><br/>
 <font size='18'>PLATOON SERGEANT</font>
 <br/>
-1. receive mission from higher.
+1. Receive mission from higher.
 <br/>
-2. Perform platoon leader tasks if needed.
+2. Be prepared to perform platoon leader tasks, if needed.
 <br/>
 3. Ensure that squad leaders know their call signs.
 <br/>
 4. Ensure that the platoon is properly geared for the mission, distribute special equipment from platoon lock boxes.
 <br/>
-5. Designate the platoon casualty collection point.
+5. Designate the platoon casualty collection point in a safe, central location.
 <br/>
-6. Continually collect reports from Squad leaders.
+6. Enforce discipline in movement and continually collect reports from Squad leaders.
 <br/><br/>
 <font size='18'>SQUAD LEADER</font>
 <br/>
-1. receive mission from higher.
+1. Receive mission from higher.
 <br/>
-2. Affirm that team leaders have accountability of their subordinates and know their team call sign (alpha or bravo).
+2. Assign fire teams and team call signs and affirm that team leaders have accountability of their subordinates and know their team call sign.
 <br/>
 3. Select a route from your platoon objective rally point to your element objective.
 <br/>
 4. Designate a point team and a trail team.
 <br/>
-5. Report to higher that your squad is ready to move and await the move order.
+5. Report to higher that your squad is READY TO MOVE and await the order to MOVE OUT.
 <br/><br/>
 <font size='18'>TEAM LEADER</font>
 <br/>
 1. Gather accountability of your fire team.
 <br/>
-2. Know your call sign (alpha or bravo).
+2. Know your call sign.
 <br/>
-3. receive orders from your squad leader.
+3. Receive orders from your squad leader.
 <br/>
-4. Ensure that your team is properly equipped, request special supplies (explosives) from the platoon sergeant, if needed.
+4. Ensure that your team is properly equipped, request special equipment, if needed.
 <br/>
-5. Review skills with your team while awaiting the move order.
+5. Report that your team is READY TO MOVE and review skills with your team while awaiting the order to MOVE OUT.
 "]];
 
 // ====================================================================================
@@ -426,7 +443,7 @@ player createDiaryRecord ["diary", ["Leadership Procedures","
 player createDiaryRecord ["diary", ["Execution","
 <font size='18'>COMMANDER'S INTENT</font>
 <br/>
-Victory in battle will secure further contracts in the area. When operating, be scarce where the enemy is strong, and be decisive where the enemy is weak. Don't engage in battle carelessly.
+Athena Security Group will wisely choose when and where to engage the enemy. We do not engage on enemy terms. Be scarce where the enemy is strong, crush them where they are weak. Above all, maintain professionalism in your actions.
 <br/><br/>
 <font size='18'>SPECIAL TASKS</font>
 <br/>
@@ -437,7 +454,7 @@ Recover any abandoned enemy gear or weapons, these can be sold or traded for new
 
 //MISSION
 player createDiaryRecord ["diary", ["Mission","
-The company will conduct security operations within our areas of responsibility continuously to ensure the protection of our clients' life, liberty, and property. 
+The company will conduct security operations within our areas of responsibility to ensure the protection of our clients' life, liberty, and property.
 <br/><br/>
 Whenever possible, the company will extend protection to those who can not afford a subscription package, but our priorities must remain with our clients.
 "]];
@@ -446,13 +463,13 @@ Whenever possible, the company will extend protection to those who can not affor
 
 //SITUATION
 player createDiaryRecord ["diary", ["Situation","
-The company continues to operate in high risk areas. Plan operations accordingly.
+The company continues to operate in high risk areas. Athena Security Group is simultaneously conducting security, stability, and conventional warfare operations within the area of responsibility. Plan operations according to your immediate objectives.
 <br/><br/>
 <font size='18'>ENEMY FORCES</font>
 <br/>
-Uniformed military forces are considered hostile. Local police temperament varies from town to town, adhere to the rules of engagement when unsure.
+Hostile enemy military units, militia, and police all operate within the area. Military units are well equipped, well trained, and have heavy weapons and armor available. Local militias are significantly less well equipped, while police forces operate as light mounted infantry.
 <br/><br/>
 <font size='18'>FRIENDLY FORCES</font>
 <br/>
-Friendly militia are operating in our area, adhere to the rules of engagement.
+Friendly military, militia, and police all operate within the area, adhere to the rules of engagement. Friendly forces generally focus on securing local areas that are not under enemy control and rely upon Athena Security Group to take up the conventional fight.
 "]];

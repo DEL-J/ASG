@@ -21,7 +21,7 @@ item16[] = {"Rank_2",2,250,7.164059,422.508545,97.164139,472.508545,0.000000,"Ra
 item17[] = {"Rank_1",2,250,103.656487,419.327454,193.656586,469.327454,0.000000,"Rank 1"};
 item18[] = {"Rank_0",2,250,206.854980,419.556732,296.855072,469.556732,0.000000,"Rank 0"};
 item19[] = {"Moving_Along",8,218,-104.428688,274.632324,-14.428684,324.632324,0.000000,"Moving Along"};
-item20[] = {"Leader_Or_Not",2,4346,-103.217438,160.893967,-13.217361,210.893768,0.000000,"Leader" \n "Or" \n "Not"};
+item20[] = {"Leader_Or_Not",2,250,-103.217438,160.893967,-13.217361,210.893768,0.000000,"Leader" \n "Or" \n "Not"};
 item21[] = {"Leader",4,218,16.451950,186.622742,106.451927,236.622742,50.000000,"Leader"};
 item22[] = {"SubLeader",4,218,-247.013474,209.645706,-157.013489,259.645660,49.000000,"SubLeader"};
 item23[] = {"Normal_Unit",8,218,-157.555481,58.934967,-67.555428,108.934937,47.000000,"Normal Unit"};
@@ -399,8 +399,8 @@ link199[] = {159,160};
 link200[] = {161,75};
 link201[] = {162,31};
 link202[] = {163,107};
-globals[] = {0.000000,0,0,0,0,640,480,2,269,6316128,1,-588.444641,3901.187012,1400.156372,-1982.849976,1209,911,1};
-window[] = {2,-1,-1,-1,-1,1050,75,1472,75,3,1227};
+globals[] = {0.000000,0,0,0,0,640,480,2,269,6316128,1,-617.571716,721.369690,882.512878,-93.175552,1209,881,1};
+window[] = {2,-1,-1,-1,-1,1125,150,1547,150,3,1227};
 *//*%FSM</HEAD>*/
 class FSM
 {
@@ -543,6 +543,13 @@ class FSM
        "_Unit setVariable [""VCOM_DOWNED"",0,false];" \n
        "_Unit setVariable [""VCOM_GRENADETHROWN"",1,false];" \n
        "" \n
+       "_unit setVariable [""AUSMD_interact_tiedUp"",false,true];" \n
+       "_unit setVariable [""AUSMD_interact_arrested"",false,true];" \n
+       "_unit setVariable [""AUSMD_interact_beingInterrogated"",false,true];" \n
+       "_unit setVariable [""AUSMD_interact_gaveInfo"",false,true];" \n
+       "_unit setVariable [""AUSMD_interact_surrendered"",false,true];" \n
+       "" \n
+       "" \n
        "" \n
        "_UnitSide = (side _Unit);" \n
        "_Unit setVariable [""VCOMSIDE"",_UnitSide,false];" \n
@@ -552,7 +559,9 @@ class FSM
        "" \n
        "_Unit addEventHandler [""Fired"",{[_this] call FiredAtTarget;}];" \n
        "_Unit addEventHandler [""Killed"",{_this call VCOM_fnc_ClosestAllyWarn;}];" \n
-       "_Unit addEventHandler [""Hit"",{_this call VCOM_fnc_HitAI;}];"/*%FSM</STATEINIT""">*/;
+       "_Unit addEventHandler [""Hit"",{_this call VCOM_fnc_HitAI;}];" \n
+       "" \n
+       ""/*%FSM</STATEINIT""">*/;
       precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
       class Links
       {
@@ -838,7 +847,7 @@ class FSM
           priority = 55.000000;
           to="Dead_Captain";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"!alive _Unit"/*%FSM</CONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!alive _Unit || _unit getVariable [""AUSMD_interact_surrendered"",false]"/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
@@ -903,7 +912,7 @@ class FSM
           priority = 55.000000;
           to="Dead_Captain_1";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"!alive _Unit"/*%FSM</CONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!alive _Unit || _unit getVariable [""AUSMD_interact_surrendered"",false]"/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
@@ -997,7 +1006,7 @@ class FSM
           priority = 55.000000;
           to="Dead_Captain_6";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"!alive _Unit"/*%FSM</CONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!alive _Unit || _unit getVariable [""AUSMD_interact_surrendered"",false]"/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
@@ -1079,7 +1088,7 @@ class FSM
           priority = 55.000000;
           to="Dead_Captain_8";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"!alive _Unit"/*%FSM</CONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!alive _Unit || _unit getVariable [""AUSMD_interact_surrendered"",false]"/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
@@ -1279,7 +1288,7 @@ class FSM
           priority = 55.000000;
           to="Dead_Captain_2";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"!alive _Unit"/*%FSM</CONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!alive _Unit || _unit getVariable [""AUSMD_interact_surrendered"",false]"/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
@@ -1387,7 +1396,7 @@ class FSM
           priority = 55.000000;
           to="Dead_Captain_1";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"!alive _Unit"/*%FSM</CONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!alive _Unit || _unit getVariable [""AUSMD_interact_surrendered"",false]"/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
@@ -1569,7 +1578,7 @@ class FSM
           priority = 55.000000;
           to="Dead_Captain_3";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"!alive _Unit"/*%FSM</CONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!alive _Unit || _unit getVariable [""AUSMD_interact_surrendered"",false]"/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
@@ -1706,7 +1715,7 @@ class FSM
           priority = 55.000000;
           to="Dead_Captain_9";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"!alive _Unit"/*%FSM</CONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!alive _Unit || _unit getVariable [""AUSMD_interact_surrendered"",false]"/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
@@ -1796,7 +1805,7 @@ class FSM
           priority = 55.000000;
           to="Dead_Captain_11";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"!alive _Unit"/*%FSM</CONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!alive _Unit || _unit getVariable [""AUSMD_interact_surrendered"",false]"/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
@@ -1896,7 +1905,7 @@ class FSM
           priority = 55.000000;
           to="Dead_Captain_10";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"!alive _Unit"/*%FSM</CONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!alive _Unit || _unit getVariable [""AUSMD_interact_surrendered"",false]"/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
@@ -2031,7 +2040,7 @@ class FSM
           priority = 55.000000;
           to="Dead_Captain_4";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"!alive _Unit"/*%FSM</CONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!alive _Unit || _unit getVariable [""AUSMD_interact_surrendered"",false]"/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
@@ -2122,7 +2131,7 @@ class FSM
           priority = 55.000000;
           to="Dead_Captain_7";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"!alive _Unit"/*%FSM</CONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!alive _Unit || _unit getVariable [""AUSMD_interact_surrendered"",false]"/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/
@@ -2222,7 +2231,7 @@ class FSM
           priority = 55.000000;
           to="Dead_Captain_5";
           precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-          condition=/*%FSM<CONDITION""">*/"!alive _Unit"/*%FSM</CONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!alive _Unit || _unit getVariable [""AUSMD_interact_surrendered"",false]"/*%FSM</CONDITION""">*/;
           action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
         };
         /*%FSM</LINK>*/

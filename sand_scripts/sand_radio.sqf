@@ -11,7 +11,7 @@ CHANNEL_DATA = [ //MUST ALL BE UPPER CASE!
     ["A21","A22","A23","PL2","PS2","RO2","CM2"], //Members of 'Channel 2'
     ["A31","A32","A33","PL3","PS3","RO3","CM3"], //Members of 'Channel 3'
     ["RO6","RO1","RO2","RO3","HP1","HP2","HP3","WSL","ASL"], //Members of 'Channel 4'
-    ["HQ6","HQ5","HQ4","OPS","RO6","CM6","HP1","HP2","HP3","WSL","ASL"] //Members of 'Channel 5'
+    ["RCO","RXO","ROS","RSM","BCO","BXO","BPO","BLO","BOS","BFS","HQ6","HQ5","HQ4","OPS","RO6","CM6","HP1","HP2","HP3","WSL","ASL"] //Members of 'Channel 5'
 ];
 
 if (hasInterface && !isServer) then { //if not the server and is a client that is playing i.e not headless

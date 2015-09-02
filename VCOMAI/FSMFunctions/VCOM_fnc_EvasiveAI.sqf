@@ -5,9 +5,8 @@ _Unit = _this select 0;
 
 _CurrentWeapon = currentWeapon _Unit;
 
-
 //If the unit has no weapon... just exit.
-if (_CurrentWeapon == "") exitWith {};
+if (_CurrentWeapon == "" || _unit getVariable ["AUSMD_interact_surrendered",false]) exitWith {};
 
 _UnitNerves = _Unit getvariable "VCOM_NERVES";	
 _RandomChance = random 100;

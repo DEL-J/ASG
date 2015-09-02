@@ -7,6 +7,8 @@ private ["_Unit","_Killer","_UnitSide","_NoFlanking","_GrabVariable","_CheckStat
 _Unit = _this select 0;
 _Killer = _this select 1;
 
+if(_unit getVariable ["AUSMD_interact_surrendered",false]) exitWith {};
+
 _UnitSide = (_Unit getVariable "VCOMSIDE");
 scopeName "Scope1A";
 

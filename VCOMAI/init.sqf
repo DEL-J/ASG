@@ -26,8 +26,8 @@ VCOM_fnc_ChangeFormation = compile preprocessFile "VCOMAI\FSMFunctions\VCOM_fnc_
 VCOM_fnc_CheckBag = compile preprocessFile "VCOMAI\FSMFunctions\VCOM_fnc_CheckBag.sqf";
 VCOM_fnc_GuessDirection = compile preprocessFile "VCOMAI\FSMFunctions\VCOM_fnc_GuessDirection.sqf";
 VCOM_fnc_ReactToFire = compile preprocessFile "VCOMAI\FSMFunctions\VCOM_fnc_ReactToFire.sqf";
-playMoveEverywhere = compileFinal "_this select 0 playMoveNow (_this select 1);";
-switchMoveEverywhere = compileFinal "_this select 0 switchMove (_this select 1);";
+playMoveEverywhere = compileFinal "if((_this select 0) getVariable [""AUSMD_interact_surrendered"",false]) exitWith {}; _this select 0 playMoveNow (_this select 1);";
+switchMoveEverywhere = compileFinal "if((_this select 0) getVariable [""AUSMD_interact_surrendered"",false]) exitWith {}; _this select 0 switchMove (_this select 1);";
 Vcom_fnc_pack = compile preprocessFile "VCOMAI\FSMFunctions\Vcom_fnc_pack.sqf";
 Vcom_fnc_unpack = compile preprocessFile "VCOMAI\FSMFunctions\Vcom_fnc_unpack.sqf";
 //VCOM_fnc_HandledHeal = compile preprocessFile "VCOMAI\FSMFunctions\VCOM_fnc_HandledHeal.sqf";
@@ -161,11 +161,13 @@ ArtilleryArray = [];
 
 //Below is loop to check for new AI spawning in to be added to the list
 
-[] spawn {
-if (!(isDedicated)) then {
-waitUntil {!isNil "BIS_fnc_init"};
-waitUntil {!(isnull (findDisplay 46))};
-};
+[] spawn 
+{
+	if (!(isDedicated)) then 
+	{
+		waitUntil {!isNil "BIS_fnc_init"};
+		waitUntil {!(isnull (findDisplay 46))};
+	};
 
 while {true} do {
 
@@ -174,7 +176,16 @@ sleep 0.25;
 if (local _x) then {
 _CheckVariable = _x getVariable "FSMRunning";
 if (isNil ("_CheckVariable")) then {_CheckVariable = 0;};
-if (!(isplayer _x) && (_CheckVariable == 0)) then {null = [_x] execFSM "AIBEHAVIORNEW.fsm";};
+if (!(isplayer _x) && (_CheckVariable == 0)) then {
+_x setVariable ["AUSMD_interact_tiedUp",false,true];
+_x setVariable ["AUSMD_interact_arrested",false,true];
+_x setVariable ["AUSMD_interact_beingInterrogated",false,true];
+_x setVariable ["AUSMD_interact_gaveInfo",false,true];
+_x setVariable ["AUSMD_interact_surrendered",false,true];
+null = [_x] execFSM "AIBEHAVIORNEW.fsm";
+
+
+};
 if ((isPlayer _x)  && (_CheckVariable == 0)) then {
 player setVariable ["VCOM_FiredTime", 0];
 player setVariable ["PLAYERCOMMANDER", 1];

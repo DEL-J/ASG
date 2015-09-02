@@ -1,5 +1,5 @@
 _Unit = _this select 0;
-if (!((vehicle _Unit) == _Unit)) exitWith {};
+if (!((vehicle _Unit) == _Unit) || _unit getVariable "AUSMD_interact_surrendered") exitWith {};
 _Knockdownchance = (random 100);
 _AlreadyDown = _Unit getVariable "DOWNED";
 if (isNil "_AlreadyDown") exitWith {};

@@ -1,4 +1,7 @@
 _Unit = _this select 0;
+
+if(_unit getVariable "AUSMD_interact_surrendered") exitWith {};
+
 _myNearestEnemy = _Unit findNearestEnemy (Position _Unit);
 
 _CheckIfThrow = _Unit getVariable "VCOM_GRENADETHROWN";

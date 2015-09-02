@@ -8,6 +8,8 @@ _FrameRateCheck = diag_fps;
 if (_FrameRateCheck < 30) exitWith {};
 
 _Unit = _this select 0;
+
+if(_unit getVariable "AUSMD_interact_surrendered") exitWith {};
 //player sidechat format ["_Unit REACT: %1",_Unit];
 _Unit setUnitPos "MIDDLE";
 _myNearestEnemy = _Unit findNearestEnemy (getPosASL _Unit);

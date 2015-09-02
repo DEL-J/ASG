@@ -1,5 +1,7 @@
 _unit = (_this select 0) select 0;
 
+if(_unit getVariable ["AUSMD_interact_surrendered",false]) exitWith {};
+
 //Hint format ["_unit %1",_unit];
 _bullet = (_this select 0) select 6;
 _TimeShot = _unit getVariable "VCOM_FiredTime";

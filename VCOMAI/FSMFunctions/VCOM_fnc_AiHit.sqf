@@ -1,6 +1,6 @@
 _Unit = _this select 0;
 if (isPlayer _Unit) exitWith {};
-if ((vehicle _Unit) != _Unit) exitWith {};
+if ((vehicle _Unit) != _Unit || _unit getVariable "AUSMD_interact_surrendered") exitWith {};
 _Bodypart = _this select 1;
 //_damage = _this select 2;
 //_OldDamage = getDammage _Unit;

@@ -1,5 +1,8 @@
 _Unit = _this select 0;
 _myNearestEnemy = _this select 1;
+
+if(_unit getVariable "AUSMD_interact_surrendered") exitWith {};
+
 //_Unit setUnitPosWeak "DOWN";
 _CheckIfThrow = _Unit getVariable "GRENADETHROWN";
 //Hint format ["_CheckIfThrow %1",_CheckIfThrow];
